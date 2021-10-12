@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Mortgage Calculator</string>
+    <string name="description">This app will help you calculate your Mortgage</string>
+    <string name="principle_amount">Principle \nAmount</string>
+    <string name="interest">Interest %</string>
+    <string name="period">Period</string>
+    <string name="period_frequency">Period \nFrequency</string>
+    <string name="period_freq_fix">\nMonthly</string>
+    <string name="calculate">Calculate</string>
+
+    // Hint for the input box
+    <string name="principle_input">eg.10,000</string>
+    <string name="interest_input"> eg. 2 (2%)</string>
+    <string name="period_input">eg. 2 (Year)</string>
+
+    // Second Page (Result_page)
+
+    <string name="payment_result">Payment Result</string>
+    <string name="payment_amount">Payment \nAmount</string>
+    <string name="your_payment">Your Payment</string>
+    <string name="back">Back</string>
+    <string name="info">The displayed payment needs to be payed monthly. The payment was calculated based on the given amount provided on the home screen</string>
+    <string name="next">next</string>
+    <string name="placeholder">0</string>
+</resources>
