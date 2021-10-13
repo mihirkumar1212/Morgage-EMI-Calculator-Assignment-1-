@@ -55,7 +55,7 @@
             android:importantForAutofill="no"
             android:inputType="numberDecimal"
             android:minHeight="48dp"
-            android:textColor="#39000000"
+            android:textColor="@color/black"
             android:textColorHint="#39000000"
             android:textSize="20sp"
             tools:ignore="SpeakableTextPresentCheck,TextContrastCheck" />
@@ -94,7 +94,7 @@
             android:importantForAutofill="no"
             android:inputType="numberDecimal"
             android:minHeight="48dp"
-            android:textColor="#39000000"
+            android:textColor="@color/black"
             android:textColorHint="#39000000"
             android:textSize="20sp"
             tools:ignore="TextContrastCheck" />
@@ -132,7 +132,7 @@
             android:importantForAutofill="no"
             android:inputType="number"
             android:minHeight="48dp"
-            android:textColor="#39000000"
+            android:textColor="@color/black"
             android:textColorHint="#39000000"
             tools:ignore="TextContrastCheck" />
     </TableRow>

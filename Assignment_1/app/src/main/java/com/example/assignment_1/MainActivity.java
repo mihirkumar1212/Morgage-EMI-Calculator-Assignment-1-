@@ -30,21 +30,21 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 double numerator;
                 double denominator;
-                double principle = Integer.parseInt(princ_input.getText().toString());
-                double interest = (Integer.parseInt(interest_input.getText().toString()));
+                double principle = Double.parseDouble(princ_input.getText().toString());
+                double interest = Double.parseDouble(interest_input.getText().toString());
                 int period = Integer.parseInt(period_input.getText().toString());
-
                 period = period * 12;
-                interest = (interest / 100)/12;
+                interest = (interest/ 100)/12;
+
                 double a= (1 + interest);
                 numerator = interest *(Math.pow( a , period));
-                double b = (1 + interest);
-                denominator = (Math.pow( b , period)) - 1;
-
+                denominator = (Math.pow( a , period)) - 1;
                 double result =(principle * (numerator / denominator));
 
                 String passing = (String.format("%.2f", result));
-                System.out.println("the result is "+ passing);
+                //System.out.println("the result is "+ passing);
+
+
                 Intent intent = new Intent(MainActivity.this, result_page.class);
                 intent.putExtra("cal", passing);
                 startActivity(intent);
