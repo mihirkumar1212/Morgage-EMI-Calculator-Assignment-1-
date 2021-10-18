@@ -28,26 +28,37 @@ public class MainActivity extends AppCompatActivity {
         cal_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                double numerator;
-                double denominator;
-                double principle = Double.parseDouble(princ_input.getText().toString());
-                double interest = Double.parseDouble(interest_input.getText().toString());
-                int period = Integer.parseInt(period_input.getText().toString());
-                period = period * 12;
-                interest = (interest/ 100)/12;
 
-                double a= (1 + interest);
-                numerator = interest *(Math.pow( a , period));
-                denominator = (Math.pow( a , period)) - 1;
-                double result =(principle * (numerator / denominator));
+                // check for validation
+                if(princ_input.getText().toString().length() == 0)
+                     princ_input.setError( "Principle amount is required!" );
+               else if(interest_input.getText().toString().length() == 0)
+                    interest_input.setError( "Interest  is required!" );
+               else if(period_input.getText().toString().length() == 0)
+                    period_input.setError( "Number of years is required!" );
 
-                String passing = (String.format("%.2f", result));
-                //System.out.println("the result is "+ passing);
+                else{
+                    double numerator;
+                    double denominator;
+                    double principle = Double.parseDouble(princ_input.getText().toString());
+                    double interest = Double.parseDouble(interest_input.getText().toString());
+                    int period = Integer.parseInt(period_input.getText().toString());
+                    period = period * 12;
+                    interest = (interest / 100) / 12;
+
+                    double a = (1 + interest);
+                    numerator = interest * (Math.pow(a, period));
+                    denominator = (Math.pow(a, period)) - 1;
+                    double result = (principle * (numerator / denominator));
+
+                    String passing = (String.format("%.2f", result));
+                    //System.out.println("the result is "+ passing);
 
 
-                Intent intent = new Intent(MainActivity.this, result_page.class);
-                intent.putExtra("cal", passing);
-                startActivity(intent);
+                    Intent intent = new Intent(MainActivity.this, result_page.class);
+                    intent.putExtra("cal", passing);
+                    startActivity(intent);
+                }
             }
         });
 
